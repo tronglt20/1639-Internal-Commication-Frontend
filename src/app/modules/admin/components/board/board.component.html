@@ -1,0 +1,100 @@
+<div class="container-md">
+  <dx-button text="Create User +" (click)="showAddUserPopup()" class="btn btn-primary m-3"></dx-button>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">Role</th>
+      </tr>
+    </thead>
+    <tbody>
+      <ng-container *ngFor="let user of userList">
+        <tr>
+          <th scope="row">1</th>
+          <td>{{ user.userName }}</td>
+          <td>{{ user.email }}</td>
+          <td>{{ user.role }}</td>
+        </tr>
+      </ng-container>
+    </tbody>
+  </table>
+</div>
+
+<dx-popup
+  [width]="500"
+  [height]="400"
+  [(visible)]="popupVisible"
+  [closeOnOutsideClick]="true"
+  [dragEnabled]="false"
+  title="Create User"
+  [showTitle]="true"
+>
+<form
+      [formGroup]="registerForm"
+      autocomplete="off"
+      novalidate
+      (ngSubmit)="registerUser(registerForm.value)"
+    >
+    <div class="form-group row">
+      <label for="name" class="col-form-label col-sm-2">Name:</label>
+      <div class="col-md-5">
+        <input
+          type="text"
+          id="name"
+          formControlName="userName"
+          class="form-control"
+        />
+      </div>
+    </div>
+      <div class="form-group row">
+        <label for="email" class="col-form-label col-sm-2">Email:</label>
+        <div class="col-md-5">
+          <input
+            type="email"
+            id="email"
+            formControlName="email"
+            class="form-control"
+          />
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="password" class="col-form-label col-sm-2">Password:</label>
+        <div class="col-md-5">
+          <input
+            type="password"
+            id="password"
+            formControlName="password"
+            class="form-control"
+          />
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="confirm" class="col-form-label col-sm-2"
+          >Confirm Password:</label
+        >
+        <div class="col-md-5">
+          <input
+            type="password"
+            id="confirm"
+            formControlName="confirm"
+            class="form-control"
+          />
+        </div>
+      </div>
+      <br />
+      <div class="form-group row">
+        <div class="col-md-1">
+          <button
+            type="submit"
+            class="btn btn-info"
+            [disabled]="!registerForm.valid"
+          >
+            Register
+          </button>
+        </div>
+      </div>
+    </form>
+</dx-popup>

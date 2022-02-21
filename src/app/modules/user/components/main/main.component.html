@@ -1,0 +1,17 @@
+<div class="main">
+    <div class="header-container">
+        <div class="d-flex align-items-center">
+            <img src="{{ chosenUser?.imagePath }}" class="user-avt" />
+            <h1>{{ chosenUser?.email }}</h1>
+          </div>
+    </div>
+    <div class="body-container">
+        Body
+    </div>
+    <div class="chat-box">
+        <div class="input-group">
+            <input type="text" class="form-control" placeholder="Text ..." aria-label="Recipient's username" aria-describedby="button-addon2" #message>
+            <button class="btn btn-outline-secondary" type="button" id="button-addon2" (click)="sendMessage(message.value); message.value = ''">Send</button>
+          </div>
+    </div>
+</div>

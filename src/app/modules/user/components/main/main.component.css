@@ -1,0 +1,34 @@
+.main {
+  background-color: #131313;
+  height: 100%;
+  color: white;
+  position: relative;
+}
+
+.header-container {
+  padding: 15px;
+  border-bottom: 1px solid #303030;
+}
+.user-avt {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+h1 {
+  margin-left: 20px;
+  font-size: 20px;
+  font-weight: 500;
+}
+.body-container {
+  height: 85%;
+}
+.input-group {
+  padding: 20px;
+}
+.chat-box {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+}

@@ -1,0 +1,6 @@
+<div class="container">
+  <div class="row">
+    <user-navigation [currentUser]="currentUser" class="col-sm-4" (navigateToUser)="navigateToUser($event)"></user-navigation>
+    <user-main [currentUser]="currentUser" [chosenUser]="chosenUser" class="col-sm-8"></user-main>
+  </div>
+</div>

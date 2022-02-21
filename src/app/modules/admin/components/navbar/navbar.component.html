@@ -1,0 +1,13 @@
+<div class="container-md">
+  <nav class="navbar navbar-light">
+    <div class="nav-link" routerLink="/home">Home</div>
+    <div *ngIf="!currentUser" class="auth d-flex">
+      <div class="nav-link me-3" [routerLink]="['/auth/login']">Login</div>
+      <!-- <div  class="nav-link" routerLink="/auth/register">Register</div> -->
+    </div>
+    <div *ngIf="currentUser" class="d-flex">
+      <div class="nav-link me-3">{{ currentUser.email }}</div>
+      <div class="nav-link" (click)="logout()">Logout</div>
+    </div>
+  </nav>
+</div>

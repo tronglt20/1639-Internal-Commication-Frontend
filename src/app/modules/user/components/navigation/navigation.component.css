@@ -1,0 +1,40 @@
+.navigation{
+    background-color: #131313;
+    height: 100%;
+    color: white;
+    border-right: 1px solid #303030;
+}
+.user-avt{
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.header-container{
+    padding: 20px;
+}
+h1{
+    margin-left: 20px;
+    font-size: 30px;
+    font-weight: 700;
+}
+.search-container{
+    padding: 10px;
+}
+
+.navigation-container{
+    padding: 10px;
+}
+.navigate-item{
+    margin: 10px 0;
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 8px;
+}
+.navigate-item:hover{
+    background-color: #999;
+}
+h3{
+    font-size: 18px;
+    padding: 10px;
+}
